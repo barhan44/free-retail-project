@@ -1,0 +1,8 @@
+version: '3.1'
+
+services:
+  mongodev:
+    image: mongo:4.4.0-rc9-bionic
+    restart: always
+    ports:
+    - 27017:27017
