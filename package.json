@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "start:dev": "nodemon index"
+    "server": "nodemon index",
+    "client-install": "npm install --prefix client",
+    "client-start": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client-start\" "
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +26,7 @@
     "passport-jwt": "^4.0.0"
   },
   "devDependencies": {
+    "concurrently": "^5.2.0",
     "nodemon": "^2.0.4",
     "prettier": "^2.0.5"
   }
