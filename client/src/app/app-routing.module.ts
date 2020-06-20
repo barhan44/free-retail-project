@@ -6,6 +6,12 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { MainLayoutComponent } from './shared/layouts/main-layout/main-layout.component';
 import { AuthGuard } from './shared/classes/auth.guard';
+import { OverviewPageComponent } from './overview-page/overview-page.component';
+import { AnalyticsPageComponent } from './analytics-page/analytics-page.component';
+import { HistoryPageComponent } from './history-page/history-page.component';
+import { OrderPageComponent } from './order-page/order-page.component';
+import { CategoriesPageComponent } from './categories-page/categories-page.component';
+import { CategoriesFormComponent } from './categories-page/categories-form/categories-form.component';
 
 const routes: Routes = [
   {
@@ -31,7 +37,36 @@ const routes: Routes = [
     path: '',
     canActivate: [AuthGuard],
     component: MainLayoutComponent,
-    children: [],
+    children: [
+      {
+        path: 'overview',
+        component: OverviewPageComponent
+      },
+      {
+        path: 'analytics',
+        component: AnalyticsPageComponent
+      },
+      {
+        path: 'history',
+        component: HistoryPageComponent
+      },
+      {
+        path: 'order',
+        component: OrderPageComponent
+      },
+      {
+        path: 'categories',
+        component: CategoriesPageComponent
+      },
+      {
+        path: 'categories/new',
+        component: CategoriesFormComponent
+      },
+      {
+        path: 'categories/:id',
+        component: CategoriesFormComponent
+      },
+    ],
   },
 ];
 

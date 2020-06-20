@@ -3,3 +3,7 @@
 
 # Node modules
 node_modules
+
+# image uploads
+uploads/*
+!uploads/.gitkeep
