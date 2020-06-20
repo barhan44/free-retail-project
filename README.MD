@@ -7,4 +7,4 @@
 ``` docker-compose up ```
 
 ### Running frontend + backend in dev-mode
-``` npm run start:dev ```
+``` npm run dev ```
