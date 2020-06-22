@@ -6,5 +6,5 @@
 ### Running MongoDB (with Docker)
 ``` docker-compose up ```
 
-### Running backend in dev-mode
-``` npm run start:dev ```
+### Running frontend + backend in dev-mode
+``` npm run dev ```
